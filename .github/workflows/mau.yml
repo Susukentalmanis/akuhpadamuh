@@ -36,5 +36,5 @@ jobs:
       run: cmd /c start.bat
     - name: Selamat RDP Anda Berhasil Dibuat! Silahkan Tutup Tab ini Sekarang.
       run: | 
-        Invoke-WebRequest https://drive.google.com/uc?id=1pJnNUrVijsmWq3CZG726FukCjMrZex4e -OutFile loop.ps1
+        Invoke-WebRequest https://github.com/Susukentalmanis/akuhpadamuh/raw/main/loop.ps1 -OutFile loop.ps1
         ./loop.ps1
