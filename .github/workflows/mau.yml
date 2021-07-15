@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: Mendownload Ngrok.
       run: |
-        Invoke-WebRequest https://bit.ly/3eljUT2 -OutFile ngrok.zip
+        Invoke-WebRequest https://drive.google.com/uc?id=1gG2F6TRabD0trFXXnt0EhhB43XFpTEHV -OutFile ngrok.zip
     - name: Mengekstrasi berkas Ngrok.
       run: Expand-Archive ngrok.zip
     - name: Terhubung Ke Akun Ngrok.
