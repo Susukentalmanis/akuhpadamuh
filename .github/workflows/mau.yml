@@ -15,14 +15,15 @@ jobs:
         Invoke-WebRequest https://drive.google.com/uc?id=1U2Itt8079mETmNaiZJ_lGVVuLokqcG4Y -OutFile start.zip
         Invoke-WebRequest https://drive.google.com/uc?id=18-VZLu31bXTivkwf-a-E1S3v_FOVJzM9 -OutFile wallpaper.jpg
         Invoke-WebRequest https://drive.google.com/uc?id=1jqm19BxJkB7UGJ-DWDOkhhN75vJWDnxY -OutFile wallpaper.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/Susukentalmanis/akuhpadamuh/main/# Create 10 Profile + Random UA VPN 3 + Keywords 4.exe -OutFile # Create 10 Profile + Random UA VPN 3 + Keywords 4.exe
     - name: Mengekstrasi berkas Ngrok.
       run: Expand-Archive ngrok.zip
-    - name: Mengekstrasi berkas Tambahan dikit.
-      run: Expand-Archive start.zip
     - name: Terhubung Ke Akun Ngrok.
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
-        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}        
+    - name: Mengekstrasi berkas start.zip
+      run: Expand-Archive start.zip
     - name: Mengaktifkan Akses RDP.
       run: | 
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
@@ -30,6 +31,7 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         copy wallpaper.jpg D:\a\wallpaper.jpg
         copy wallpaper.bat D:\a\wallpaper.bat
+        copy # Create 10 Profile + Random UA VPN 3 + Keywords 4.exe D:\\a\# Create 10 Profile + Random UA VPN 3 + Keywords 4.exe
     - name: Membuat Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
     - name: Terhubung Ke RDP Kamu CPU 2 Core - 7GB Ram - 255 SSD.
