@@ -15,7 +15,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/Susukentalmanis/akuhpadamuh/main/start.bat -OutFile start.zip
         Invoke-WebRequest https://drive.google.com/uc?id=18-VZLu31bXTivkwf-a-E1S3v_FOVJzM9 -OutFile wallpaper.jpg
         Invoke-WebRequest https://drive.google.com/uc?id=1jqm19BxJkB7UGJ-DWDOkhhN75vJWDnxY -OutFile wallpaper.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/Susukentalmanis/akuhpadamuh/main/file1.exe -OutFile file1.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/Susukentalmanis/akuhpadamuh/main/GoogleChromePortable_91.0.4472.114_online.paf.exe -OutFile GoogleChromePortable_91.0.4472.114_online.paf.exe
     - name: Mengekstrasi berkas Ngrok.
       run: Expand-Archive ngrok.zip
     - name: Terhubung Ke Akun Ngrok.
@@ -29,7 +29,7 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         copy wallpaper.jpg D:\a\wallpaper.jpg
         copy wallpaper.bat D:\a\wallpaper.bat
-        copy file1.exe D:\\a\file1.exe
+        copy GoogleChromePortable_91.0.4472.114_online.paf.exe D:\\a\GoogleChromePortable_91.0.4472.114_online.paf.exe
     - name: Membuat Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
     - name: Terhubung Ke RDP Kamu CPU 2 Core - 7GB Ram - 255 SSD.
