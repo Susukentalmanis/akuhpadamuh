@@ -15,7 +15,7 @@ jobs:
         Invoke-WebRequest https://drive.google.com/uc?id=1U2Itt8079mETmNaiZJ_lGVVuLokqcG4Y -OutFile start.zip
         Invoke-WebRequest https://drive.google.com/uc?id=18-VZLu31bXTivkwf-a-E1S3v_FOVJzM9 -OutFile wallpaper.jpg
         Invoke-WebRequest https://drive.google.com/uc?id=1jqm19BxJkB7UGJ-DWDOkhhN75vJWDnxY -OutFile wallpaper.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/Susukentalmanis/akuhpadamuh/main/# Create 10 Profile + Random UA VPN 3 + Keywords 4.exe -OutFile # Create 10 Profile + Random UA VPN 3 + Keywords 4.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/Susukentalmanis/akuhpadamuh/main/file1.exe -OutFile file1.exe
     - name: Mengekstrasi berkas Ngrok.
       run: Expand-Archive ngrok.zip
     - name: Terhubung Ke Akun Ngrok.
