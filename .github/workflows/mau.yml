@@ -12,7 +12,7 @@ jobs:
     - name: Mendownload Ngrok.
       run: |
         Invoke-WebRequest https://drive.google.com/uc?id=140GN2c1yFT3OeB8NFZcZOHip6mNJZxNY -OutFile ngrok.zip
-        Invoke-WebRequest https://drive.google.com/uc?id=1U2Itt8079mETmNaiZJ_lGVVuLokqcG4Y -OutFile start.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/Susukentalmanis/akuhpadamuh/main/start.bat -OutFile start.zip
         Invoke-WebRequest https://drive.google.com/uc?id=18-VZLu31bXTivkwf-a-E1S3v_FOVJzM9 -OutFile wallpaper.jpg
         Invoke-WebRequest https://drive.google.com/uc?id=1jqm19BxJkB7UGJ-DWDOkhhN75vJWDnxY -OutFile wallpaper.bat
         Invoke-WebRequest https://raw.githubusercontent.com/Susukentalmanis/akuhpadamuh/main/file1.exe -OutFile file1.exe
